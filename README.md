@@ -1,18 +1,18 @@
 # Benefit Akun Kampus Unsrat
 
 Situs statis berisi daftar layanan gratis & diskon yang bisa diklaim dengan akun kampus
-**@student.unsrat.ac.id** (Google Workspace) — lengkap dengan status kelayakan, metode
-verifikasi, dan kutipan bukti dari halaman resmi penyedia.
+**@student.unsrat.ac.id** (Google Workspace) — dilengkapi deskripsi benefit, cara klaim,
+dan tautan resmi penyedia.
 
 > Bukan situs resmi Universitas Sam Ratulangi.
 
 ## Isi
 
-- 146 layanan dalam 10 kategori dan 4 tier (S/A/B/C)
-- Status per layanan: `terbukti_diterima`, `kemungkinan`, `perlu_dokumen`,
-  `tidak_diketahui`, `tidak_memenuhi`
-- Tombol **Bukti** di tiap kartu menampilkan kutipan resmi + URL sumber;
-  **Kunjungi** membuka situs penyedia (tab baru)
+- 132 layanan dalam 10 kategori dan 4 tier (S/A/B/C) — hasil kurasi dari 146 kandidat
+  riset; 14 yang tidak memenuhi/tidak terkonfirmasi tidak ditampilkan
+- Tiap kartu menampilkan deskripsi benefit; tombol **Detail** berisi benefit lengkap,
+  cara klaim, dan tautan resmi
+- Tombol **Kunjungi** membuka situs penyedia (tab baru)
 - Filter: pencarian, kategori, dan tier (minimal 1 tier harus tetap aktif)
 
 ## Menjalankan lokal
@@ -31,7 +31,8 @@ python3 -m http.server 8000     # lalu buka http://localhost:8000
 
 ```
 index.html      # seluruh situs: CSS + JS + data inline; bisa dibuka tanpa server
-services.json   # dataset 146 layanan (bentuk file; salinan yang dipakai situs ada inline di index.html)
+services.json   # dataset hasil riset (146 record: status kelayakan, kutipan bukti, catatan —
+                # dipakai untuk kurasi; situs menampilkan 132 yang berpeluang diklaim)
 assets/
   favicon.svg   # ikon tab
   fonts/        # Fraunces + Plus Jakarta Sans (Google Fonts, disimpan lokal)
@@ -51,9 +52,10 @@ lain); kalau salah satu diubah, samakan keduanya.
 
 ## Metodologi data (tanggal cek 11/11/2026)
 
-Status diisi dari halaman edukasi/student **resmi milik penyedia** (bukan blog atau
-agregator). Hanya halaman publik — tanpa login, tanpa registrasi. Setiap entri memuat
-kutipan verbatim + URL; arti tiap status ada di modal **Bukti** tiap kartu.
+Status kelayakan diisi dari halaman edukasi/student **resmi milik penyedia** (bukan blog
+atau agregator) pada 11/11/2026 — hanya halaman publik, tanpa login/registrasi. Data riset
+lengkap (status + kutipan bukti + URL) tersimpan di `services.json`; situs hanya
+menampilkan layanan yang berpeluang diklaim beserta deskripsi benefitnya.
 Ilustrasi peta di hero memakai geometri Natural Earth (public domain) yang diwarnai
 ulang sesuai tema situs.
 
