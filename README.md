@@ -59,4 +59,4 @@ kutipan verbatim + URL; arti tiap status ada di footer situs.
 
 Bukan situs resmi Universitas Sam Ratulangi. Status & kutipan diambil dari halaman resmi
 penyedia pada 11/11/2026; benefit bisa berubah sewaktu-waktu — selalu cek syaratnya di
-situs penyedia. Desain terinspirasi [udayana.my.id](https://udayana.my.id).
+situs penyedia.
