@@ -34,7 +34,7 @@ index.html      # seluruh situs: CSS + JS + data inline; bisa dibuka tanpa serve
 services.json   # dataset 146 layanan (bentuk file; salinan yang dipakai situs ada inline di index.html)
 assets/
   favicon.svg   # ikon tab
-  fonts/        # Archivo (Google Fonts, disimpan lokal)
+  fonts/        # Fraunces + Plus Jakarta Sans (Google Fonts, disimpan lokal)
   logos/        # 140 favicon PNG (fallback runtime: google s2 favicons -> inisial)
 ```
 
@@ -53,7 +53,9 @@ lain); kalau salah satu diubah, samakan keduanya.
 
 Status diisi dari halaman edukasi/student **resmi milik penyedia** (bukan blog atau
 agregator). Hanya halaman publik — tanpa login, tanpa registrasi. Setiap entri memuat
-kutipan verbatim + URL; arti tiap status ada di footer situs.
+kutipan verbatim + URL; arti tiap status ada di modal **Bukti** tiap kartu.
+Ilustrasi peta di hero memakai geometri Natural Earth (public domain) yang diwarnai
+ulang sesuai tema situs.
 
 ## Disclaimer
 
